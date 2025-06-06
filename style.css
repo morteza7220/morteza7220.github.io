@@ -1,0 +1,56 @@
+/*
+Theme Name: Custom Mobile Nav Theme
+Author: AI Developer
+Description: A block theme with a custom mobile navigation menu.
+Version: 1.0
+Requires at least: 5.8
+Tested up to: 6.0
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: custom-mobile-nav-theme
+Tags: block-based-theme, custom-menu, responsive-layout
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*--------------------------------------------------------------
+# Mobile Navigation
+--------------------------------------------------------------*/
+.is-style-mobile-navigation {
+    display: none; /* Initially hidden on larger screens */
+}
+
+@media (max-width: 782px) {
+    /* Hide the primary navigation on mobile */
+    .wp-block-navigation:not(.is-style-mobile-navigation) {
+        display: none;
+    }
+
+    /* Display the mobile navigation */
+    .is-style-mobile-navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .is-style-mobile-menu-open {
+        /* Add styles for your mobile menu open button if needed */
+    }
+
+    /* Styles for the overlay menu when it's open */
+    .wp-block-navigation__responsive-container.is-menu-open {
+        /* Customize background, text color, etc. */
+    }
+
+    .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
+        /* Style individual menu items in the overlay */
+        margin-bottom: var(--wp--preset--spacing--20);
+    }
+
+    .wp-block-navigation__responsive-container-close {
+         /* Style the close button for the overlay menu */
+    }
+}
