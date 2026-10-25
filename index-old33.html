@@ -44,7 +44,7 @@
 <body>
     <div class="container">
         <h1>ورود</h1>
-        <input type="text" id="inputValue" placeholder="رمز ورود- عدد 4 رقمی"        <br>
+        <input type="text" id="inputValue" placeholder=""        <br>
         <button onclick="checkValue()">ورود</button>
         <p>-----</p>
     </div>
@@ -52,7 +52,7 @@
     <script>
         function checkValue() {
             const inputValue = document.getElementById('inputValue').value;
-            if (inputValue === '909090') {
+            if (inputValue == 'حافظ شیرازی') {
                 window.location.href = 'index2.html';
             } else {
                 alert('Incorrect value. Please try again.');
